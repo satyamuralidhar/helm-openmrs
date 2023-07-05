@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{- .Values.deployName.name | indent 2 }}
+  creationTimestamp: null
+  labels: 
+    app: {{- .Values.tagging | indent 4 }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{- .Values.tagging | indent 6 }}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: {{- .Values.tagging | indent 8 }}
+    spec:
+      containers:
+      - image: "{{- .Values.imageName.image}}:{{- .Values.imageName.tag}}"
+        name: {{- .Values.imageName.name | indent 2 }}
+        ports:
+        - containerPort: {{- .Values.port.clusterPort | indent 8 }}
+        resources: {}
+status: {}

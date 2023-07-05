@@ -1,0 +1,19 @@
+---
+imageName: 
+  name: openmrs
+  image: shaikkhajaibrahim/openmrs-core
+  tag: 2.4.0
+
+deployName:
+  name: openmrs-deploy
+  
+serviceName:
+  name: openmrssvc
+  service: NodePort
+
+tagging: appserver
+
+port:
+  clusterPort: "8080"
+  nodePort: "32000"
+  targetPort: "8080"
