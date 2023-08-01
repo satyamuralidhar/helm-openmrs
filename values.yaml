@@ -6,6 +6,7 @@ imageName:
 
 deployName:
   name: openmrs-deploy
+  replicas: 2
   
 serviceName:
   name: openmrssvc

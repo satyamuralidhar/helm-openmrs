@@ -6,7 +6,7 @@ metadata:
   labels: 
     app: {{- .Values.tagging | indent 4 }}
 spec:
-  replicas: 1
+  replicas: {{- .Values.deployName.replicas | indent 2 }}
   selector:
     matchLabels:
       app: {{- .Values.tagging | indent 6 }}
