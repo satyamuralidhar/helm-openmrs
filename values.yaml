@@ -8,7 +8,7 @@ deployName:
   name: openmrs-deploy
   
 serviceName:
-  name: openmrssvc
+  name: "openmrssvc"
   service: NodePort
 
 tagging: appserver
